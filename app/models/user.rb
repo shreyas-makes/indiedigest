@@ -5,6 +5,9 @@ class User < ApplicationRecord
 
   scope :subscribed, -> { where.not(stripe_subscription_id: [nil, '']) }
 
+  has_many :stakeholder_updates, through :projects
+  has_many :projects
+
   # :nocov:
   def self.ransackable_attributes(*)
     ["id", "admin", "created_at", "updated_at", "email", "stripe_customer_id", "stripe_subscription_id", "paying_customer"]
