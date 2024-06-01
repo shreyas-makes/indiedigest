@@ -2,11 +2,12 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   root 'pages#home'
+  get 'apply', to: 'pages#apply'
 
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_up: 'signup' }, controllers: { registrations: 'registrations' }
   get 'logout', to: 'pages#logout', as: 'logout'
 
-  get 'apply', to: 'pages#apply'
+
 
   resources :subscribe, only: [:index]
   resources :dashboard, only: [:index]
