@@ -1,2 +1,3 @@
 class CreateUserSubmission < ApplicationRecord
+
 end

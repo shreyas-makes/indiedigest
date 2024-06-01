@@ -1,62 +1,111 @@
-<% meta title: "Home", description: "This field creates an SEO meta description." %>
+<% meta title: "Home", description: "Home page" %>
 
-<!-- This example section is from the tailwindui.com Hero Section component library -->
-<div class="relative bg-white overflow-hidden">
+<!--Header Hero -->
+<div class="relative isolate px-6 lg:px-8">
+   <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+     <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+    </div>
+    <div class="text-center">
+       <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Newsletter swap for founders</h1>
+       <p class="mt-6 text-lg leading-8 text-gray-600">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
+       <div class="mt-10 flex items-center justify-center gap-x-6">
+           <a href="#pricing" class="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-hover-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Apply</a>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
 
-  <div class="relative pt-6 pb-16 sm:pb-24 lg:pb-32">
-    <main class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 lg:mt-32">
-      <div class="lg:grid lg:grid-cols-12 lg:gap-8">
-        <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
-          <h1>
-            <!-- <span class="block text-sm font-semibold uppercase tracking-wide text-gray-500 sm:text-base lg:text-sm xl:text-base">Coming soon</span> -->
-            <span class="mt-1 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl">
-              <span class="block text-gray-900">A great tagline</span>
-              <span class="block text-primary-600">with emphasis</span>
-            </span>
-          </h1>
-          <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-            More details about our product that you should know about.
-          </p>
-          <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
-            <p class="text-base font-medium text-gray-900">
-              Sign up to get started.
-            </p>
-            <form action="<%= new_user_registration_path %>" method="GET" class="mt-3 sm:flex">
-              <label for="email" class="sr-only">Email</label>
-              <input type="email" name="email" id="email" class="block w-full py-3 text-base rounded-md placeholder-gray-500 shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:flex-1 border-gray-300" placeholder="Enter your email">
-              <button type="submit" class="mt-3 w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto">
-                <%= ab_test(:cta, 'Start Free', 'Get Started') %>
-              </button>
-            </form>
-            <p class="mt-3 text-sm text-gray-500">
-              We care about the protection of your data. Read our
-              <%= link_to 'Privacy Policy', privacy_path, class: 'font-medium text-gray-900 underline' %>
-            </p>
-          </div>
-        </div>
-        <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
-          <svg class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-8 scale-75 origin-top sm:scale-100 lg:hidden" width="640" height="784" fill="none" viewBox="0 0 640 784" aria-hidden="true">
-            <defs>
-              <pattern id="4f4f415c-a0e9-44c2-9601-6ded5a34a13e" x="118" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="white" />
-              </pattern>
-            </defs>
-            <rect y="72" width="640" height="640" class="text-gray-50" fill="white" />
-            <rect x="118" width="404" height="784" fill="url(#4f4f415c-a0e9-44c2-9601-6ded5a34a13e)" />
+<!--Pricing -->
+
+<div id="pricing" class="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+  <div class="mx-auto max-w-2xl text-center lg:max-w-4xl">
+    <h2 class="text-base font-semibold leading-7 text-primary">Pricing</h2>
+    <p class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">The right price for you, whoever you are</p>
+  </div>
+  <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">Qui iusto aut est earum eos quae. Eligendi est at nam aliquid ad quo reprehenderit in aliquid fugiat dolorum voluptatibus.</p>
+  <div class="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
+    <div class="rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10 bg-white/60 sm:mx-8 lg:mx-0 rounded-t-3xl sm:rounded-b-none lg:rounded-tr-none lg:rounded-bl-3xl">
+      <h3 id="tier-hobby" class="text-base font-semibold leading-7 text-primary">Free</h3>
+      <p class="mt-4 flex items-baseline gap-x-2">
+        <span class="text-5xl font-bold tracking-tight text-gray-900">$0</span>
+        <span class="text-base text-gray-500">/month</span>
+      </p>
+      <p class="mt-6 text-base leading-7 text-gray-600">The perfect plan if you&#039;re just getting started with our product.</p>
+      <ul role="list" class="mt-8 space-y-3 text-sm leading-6 sm:mt-10 text-gray-600">
+        <li class="flex gap-x-3">
+          <svg class="h-6 w-5 flex-none text-primary" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
           </svg>
-          <div class="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
-            <button type="button" class="relative block w-full bg-white rounded-lg overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
-              <img class="w-full" src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="">
-              <div class="absolute inset-0 w-full h-full flex items-center justify-center" aria-hidden="true">
-                <svg class="h-20 w-20 text-primary-500" fill="white" viewBox="0 0 84 84">
-                  <circle opacity="0.9" cx="42" cy="42" r="42" fill="white" />
-                  <path d="M55.5039 40.3359L37.1094 28.0729C35.7803 27.1869 34 28.1396 34 29.737V54.263C34 55.8604 35.7803 56.8131 37.1094 55.9271L55.5038 43.6641C56.6913 42.8725 56.6913 41.1275 55.5039 40.3359Z" />
-                </svg>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </main>
+          25 products
+        </li>
+        <li class="flex gap-x-3">
+          <svg class="h-6 w-5 flex-none text-primary" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+          </svg>
+          Up to 10,000 subscribers
+        </li>
+        <li class="flex gap-x-3">
+          <svg class="h-6 w-5 flex-none text-primary" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+          </svg>
+          Advanced analytics
+        </li>
+        <li class="flex gap-x-3">
+          <svg class="h-6 w-5 flex-none text-primary" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+          </svg>
+          24-hour support response time
+        </li>
+      </ul>
+      <a href="/apply?=free" aria-describedby="tier-hobby" class="mt-8 block rounded-md py-2.5 px-3.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10 text-primary ring-1 ring-inset ring-primary hover:ring-primary focus-visible:outline-primary">Free plan</a>
+    </div>
+    <div class="rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10 relative bg-gray-900 shadow-2xl">
+      <h3 id="tier-enterprise" class="text-base font-semibold leading-7 text-primary">Enterprise</h3>
+      <p class="mt-4 flex items-baseline gap-x-2">
+        <span class="text-5xl font-bold tracking-tight text-white">$49</span>
+        <span class="text-base text-gray-400">/month</span>
+      </p>
+      <p class="mt-6 text-base leading-7 text-gray-300">Dedicated support and infrastructure for your company.</p>
+      <ul role="list" class="mt-8 space-y-3 text-sm leading-6 sm:mt-10 text-gray-300">
+        <li class="flex gap-x-3">
+          <svg class="h-6 w-5 flex-none text-primary" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+          </svg>
+          Unlimited products
+        </li>
+        <li class="flex gap-x-3">
+          <svg class="h-6 w-5 flex-none text-primary" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+          </svg>
+          Unlimited subscribers
+        </li>
+        <li class="flex gap-x-3">
+          <svg class="h-6 w-5 flex-none text-primary" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+          </svg>
+          Advanced analytics
+        </li>
+        <li class="flex gap-x-3">
+          <svg class="h-6 w-5 flex-none text-primary" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+          </svg>
+          Dedicated support representative
+        </li>
+        <li class="flex gap-x-3">
+          <svg class="h-6 w-5 flex-none text-primary" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+          </svg>
+          Marketing automations
+        </li>
+        <li class="flex gap-x-3">
+          <svg class="h-6 w-5 flex-none text-primary" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+          </svg>
+          Custom integrations
+        </li>
+      </ul>
+      <a href="/apply?=paid" aria-describedby="tier-enterprise" class="mt-8 block rounded-md py-2.5 px-3.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10 bg-primary text-white shadow-sm hover:bg-primary focus-visible:outline-primary">Paid plan</a>
+    </div>
   </div>
 </div>
