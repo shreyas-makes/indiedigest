@@ -3,10 +3,10 @@ Rails.application.routes.draw do
 
   root 'pages#home'
   get 'apply', to: 'pages#apply'
+  get 'start', to: 'pages#start'
 
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_up: 'signup' }, controllers: { registrations: 'registrations' }
   get 'logout', to: 'pages#logout', as: 'logout'
-
 
 
   resources :subscribe, only: [:index]
@@ -27,8 +27,15 @@ Rails.application.routes.draw do
   end
 
   # admin panels
-  authenticated :user, ->(user) { user.admin? } do
-    # insert sidekiq etc
-    mount Split::Dashboard, at: 'admin/split'
+
+  namespace :admin do
+    get '/', to: 'pages#dashboard'
+    get 'terms', to: 'pages#terms'
   end
+
+  # authenticated :user, ->(user) { user.admin? } do
+  #   # insert sidekiq etc
+  #   mount Split::Dashboard, at: 'admin/split'
+  # end
+
 end

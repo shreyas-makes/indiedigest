@@ -15,4 +15,8 @@ class PagesController < ApplicationController
 
   def apply
   end
+
+  def start
+  end
+
 end
