@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'apply', to: 'pages#apply'
   get 'start', to: 'pages#start'
+
+  get 'stakeholder_updates/new', to: 'stakeholder_updates#new'
+
   # hey there
 
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_up: 'signup' }
