@@ -1,21 +1,21 @@
 Rails.application.routes.draw do
-  ActiveAdmin.routes(self)
-
   root 'pages#home'
   get 'apply', to: 'pages#apply'
   get 'start', to: 'pages#start'
+  # hey there
 
-  devise_for :users, path: '', path_names: { sign_in: 'login', sign_up: 'signup' }, controllers: { registrations: 'registrations' }
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_up: 'signup' }
   get 'logout', to: 'pages#logout', as: 'logout'
-
 
   resources :subscribe, only: [:index]
   resources :dashboard, only: [:index]
-  resources :account, only: %i[index update] do
-    get :stop_impersonating, on: :collection
-  end
+  resources :account, only: [:index, :update]
   resources :billing_portal, only: [:new, :create]
   resources :blog_posts, controller: :blog_posts, path: "blog", param: :slug
+
+
+  # -post 'user_submissions', to: 'user_submissions#create'-->
+  resources :user_submissions, only: [:create]
 
   # static pages
   pages = %w[
@@ -27,15 +27,8 @@ Rails.application.routes.draw do
   end
 
   # admin panels
-
   namespace :admin do
     get '/', to: 'pages#dashboard'
-    get 'terms', to: 'pages#terms'
   end
-
-  # authenticated :user, ->(user) { user.admin? } do
-  #   # insert sidekiq etc
-  #   mount Split::Dashboard, at: 'admin/split'
-  # end
 
 end
