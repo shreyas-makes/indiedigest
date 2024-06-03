@@ -16,8 +16,6 @@ Rails.application.routes.draw do
   resources :billing_portal, only: [:new, :create]
   resources :blog_posts, controller: :blog_posts, path: "blog", param: :slug
 
-
-  # -post 'user_submissions', to: 'user_submissions#create'-->
   resources :user_submissions, only: [:create]
 
   # static pages

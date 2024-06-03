@@ -1,3 +1,0 @@
-class CreateUserSubmission < ApplicationRecord
-
-end
