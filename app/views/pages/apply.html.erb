@@ -1,0 +1,89 @@
+<%= render partial: "shared/heading", locals: {title: 'Apply', tagline: 'Add further details please'} %>
+
+<%= form_for UserSubmission.new do |form| %>
+    <div class="mx-auto max-w-lg">
+        <form>
+          <div class="space-y-12">
+              <%= form.hidden_field :plan,value: params[:plan] %>
+            <div class="border-b border-gray-900/10 pb-12">
+
+              <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                <div class="sm:col-span-3">
+                  <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">First name</label>
+                  <div class="mt-2">
+                    <!-- <input type="text" name="user_submissions{first_name}" id="user_submissions_first_name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"> -->
+                    <%= form.text_field :first_name, placeholder: 'Ryan', class: 'block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm' %>
+                  </div>
+                </div>
+
+                <div class="sm:col-span-3">
+                  <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Last name</label>
+                  <div class="mt-2">
+                    <!-- <input type="text" name="last_name" id="last_name" autocomplete="family-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"> -->
+                    <%= form.text_field :last_name, placeholder: 'Kulp', class: 'block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm' %>
+                  </div>
+                </div>
+
+                <div class="sm:col-span-4">
+                  <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+                  <div class="mt-2">
+                    <!-- <input id="email" name="email" type="email" autocomplete="email" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"> -->
+                    <%= form.text_field :email, type: 'email', placeholder: 'shreyas@gmail.com', class: 'block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm' %>
+                  </div>
+                </div>
+
+                <div class="sm:col-span-4">
+                  <label for="website" class="block text-sm font-medium leading-6 text-gray-900">Website</label>
+                  <div class="mt-2">
+                    <!-- <input id="website" name="website" type="url" autocomplete="enter your website details" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"> -->
+                  <%= form.text_field :website, type: 'url', placeholder: 'https://fomo.com', class: 'block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm' %>
+                  </div>
+                </div>
+
+
+            </div>
+
+              <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+
+                  <div class="col-span-full">
+                            <label for="text" class="block text-sm font-medium leading-6 text-gray-900">Brief indie digest</label>
+                            <div class="mt-2">
+                              <!-- <textarea id="text" name="text" rows="6" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"></textarea> -->
+                              <%= form.text_area :text, placeholder: "Stakeholders,&#10;&#10;this month we worked primarily on...".html_safe, rows: 6, class: 'block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm' %>
+                            </div>
+                            <p class="mt-3 text-sm leading-6 text-gray-600">Write a few sentences about your digest</p>
+                          </div>
+
+              </div>
+            </div>
+
+            <div class="border-b border-gray-900/10 pb-12">
+                <fieldset>
+                          <legend class="text-sm font-semibold leading-6 text-gray-900">Role</legend>
+                          <div class="mt-6 space-y-6">
+                            <div class="flex items-center gap-x-3">
+                              <!-- <input id="push_everything" name="job_role" type="radio" value="c-suite" class="h-4 w-4 border-gray-300 text-primary focus:ring-primary"> -->
+                              <input id="user_submission_job_role_csuite" name="user_submission[job_role]" type="radio" value="c-suite" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                              <label for="push_everything" class="block text-sm font-medium leading-6 text-gray-900">C-suite</label>
+                            </div>
+                            <div class="flex items-center gap-x-3">
+                              <!-- <input id="push_everything" name="job_role" type="radio" value="founder" class="h-4 w-4 border-gray-300 text-primary focus:ring-primary"> -->
+                              <input id="user_submission_job_role_founder" name="user_submission[job_role]" type="radio" value="c-suite" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                              <label for="push_everything" class="block text-sm font-medium leading-6 text-gray-900">Founder</label>
+                            </div>
+                            <div class="flex items-center gap-x-3">
+                              <!-- <input id="push_everything" name="job_role" type="radio" value="operator" class="h-4 w-4 border-gray-300 text-primary focus:ring-primary"> -->
+                              <input id="user_submission_job_role_operator" name="user_submission[job_role]" type="radio" value="c-suite" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                              <label for="push_everything" class="block text-sm font-medium leading-6 text-gray-900">Operator</label>
+                            </div>
+                          </div>
+                        </fieldset>
+            </div>
+          </div>
+
+          <div class="mt-6 flex items-center justify-end gap-x-6 max-w-full">
+            <button type="submit" class="w-full rounded-md bg-primary px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Save</button>
+          </div>
+        </form>
+    </div>
+<% end %>

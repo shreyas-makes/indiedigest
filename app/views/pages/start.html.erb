@@ -1,0 +1,42 @@
+<%= render partial: "shared/heading", locals: {title: 'Start', tagline: 'Add steps'} %>
+
+<div class="mt-6 mx-auto max-w-lg">
+    <form>
+        <div class="space-y-12">
+            <div class="border-b border-gray-900/10 pb-12">
+            <h2 class="text-base font-semibold leading-7 text-gray-900">More details</h2>
+            <p class="mt-1 text-sm leading-6 text-gray-600">Please add further information</p>
+            </div>
+
+            <div class="border-b border-gray-900/10 pb-12 space-y-4">
+                <div class="sm:col-span-4">
+                <label for="title" class="block text-sm font-medium leading-6 text-gray-900">What's your indie digest called?</label>
+                <div class="mt-2">
+                    <input id="title" name="title" type="text" autocomplete="Title of your digest" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6">
+                </div>
+                </div>
+            </div>
+
+            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+
+                <div class="col-span-full">
+                        <label for="description" class="block text-sm font-medium leading-6 text-gray-900">Describe your digest in 15 words or fewer</label>
+                        <div class="mt-2">
+                            <textarea id="description" name="description" rows="6" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"></textarea>
+                        </div>
+                        <p class="mt-3 text-sm leading-6 text-gray-600">Write a few sentences about your digest</p>
+                        </div>
+            </div>
+
+            <div class="mt-6 flex items-center justify-end gap-x-6 max-w-full">
+            <button type="submit" class="w-full rounded-md bg-primary px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">View Dashboard</button>
+            </div>
+
+
+            </div>
+
+
+        </div>
+    </form>
+
+</div>
