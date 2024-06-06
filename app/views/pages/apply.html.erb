@@ -1,5 +1,7 @@
 <%= render partial: "shared/heading", locals: {title: 'Apply', tagline: 'Add further details please'} %>
 
+<% plan= params[:plan] || 'free' %>
+
 <%= form_for UserSubmission.new do |form| %>
     <div class="mx-auto max-w-lg">
         <form>
