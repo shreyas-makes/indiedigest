@@ -20,7 +20,8 @@
             </thead>
             <tbody class="divide-y divide-gray-200 bg-white">
               <% @user_submissions.each do |user_submission| %>
-                <tr>
+
+                  <tr>
                     <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
                       <div class="flex items-center">
                         <div class="ml-4">
@@ -42,7 +43,7 @@
                             <option <%= 'selected' if user_submission.status == 'Approve' %>>Approve</option>
                             <option <%= 'selected' if user_submission.status == 'Reject' %>>Reject</option>
                           </select>
-                          <%= f.submit 'Update', class: 'w-full inline-flex justify-center rounded-md border border-transparent bg-brand-blue hover:bg-brand-blue-dark py-2 px-4 text-sm font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2' %>
+                          <%= f.submit 'Update', class: 'w-full rounded-md bg-primary px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary' %>
                         <% end %>
                       </div>
                     </td>
