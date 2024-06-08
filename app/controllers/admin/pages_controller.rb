@@ -2,9 +2,7 @@ class Admin::PagesController < ApplicationController
     # before_action :authenticate_user!, only: [:logout]
 
     def dashboard
-    end
-
-    def terms
+      @user_submissions = UserSubmission.all
     end
 
 
