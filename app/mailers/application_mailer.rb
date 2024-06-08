@@ -1,6 +1,6 @@
 class ApplicationMailer < ActionMailer::Base
   layout 'mailer'
-  default from: '"Support Team" <support@speedrail.com>'
+  default from: '"Indie Digest" <support@indiedigest.com>'
 
   after_action :create_mail_log
 
