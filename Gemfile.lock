@@ -56,7 +56,7 @@ GEM
       erubi (~> 1.11)
       rails-dom-testing (~> 2.2)
       rails-html-sanitizer (~> 1.6)
-    activeadmin (4.0.0.beta6)
+    activeadmin (4.0.0.beta7)
       arbre (~> 2.0)
       csv
       formtastic (>= 3.1)
@@ -130,7 +130,7 @@ GEM
       xpath (~> 3.2)
     chartkick (5.0.7)
     childprocess (5.0.0)
-    concurrent-ruby (1.3.2)
+    concurrent-ruby (1.3.3)
     connection_pool (2.4.1)
     crack (1.0.0)
       bigdecimal
@@ -506,7 +506,7 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  activeadmin (= 4.0.0.beta6)
+  activeadmin (= 4.0.0.beta7)
   aws-sdk-s3
   bootsnap
   capybara
